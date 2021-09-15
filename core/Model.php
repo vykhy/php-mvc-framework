@@ -66,11 +66,16 @@ abstract class Model
         return [
             self::RULE_REQUIRED => 'This field is required',
             self::RULE_EMAIL => 'This should be an email',
-            self::RULE_MIN => 'Min length of this field is {min}',
-            self::RULE_MAX => 'Max length of this field is {max}',
-            self::RULE_MATCH => 'This field must be the same as {match}',
+            self::RULE_MIN => 'Your input was too short',
+            self::RULE_MAX => 'Your input was too long',
+            self::RULE_MATCH => 'Input values do not match',
         ];
         
+    }
+
+    public function hasError($attribute)
+    {
+        return $this->errors[$attribute] ?? false;
     }
 }
 ?>
