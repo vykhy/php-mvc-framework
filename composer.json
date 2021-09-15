@@ -1,0 +1,15 @@
+{
+    "name": "pc/mvc-framework",
+    "authors": [
+        {
+            "name": "vikehieto",
+            "email": "vikehietoyhoshii@gmail.com"
+        }
+    ],
+    "autoload": {
+        "psr-4": {
+            "app\\": "./"
+        }
+    },
+    "require": {}
+}
