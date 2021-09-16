@@ -37,6 +37,6 @@ class Application{
     public function setController(Controller $controller){
         $this->controller = $controller;
     }
-}
 
+}
 ?>
