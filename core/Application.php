@@ -40,6 +40,8 @@ class Application{
         }else{
             $this->user = null;
         }
+
+        //4:29:41
     }
 
     public function run(){
