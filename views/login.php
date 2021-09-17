@@ -1,18 +1,15 @@
+<?php
 
+use app\core\form\Form;
+/**@var $model app\models\user */
+
+?>
 
 <h1>Login as a billionaire</h1>
-<form action="" method="POST">
-  <div class="mb-3">
-    <label >Name </label>
-    <input type="text" name="name" class="form-control">
-  </div>
-  <div class="mb-3">
-    <label >Email </label>
-    <input type="text" name="email" class="form-control">
-  </div>
-  <div class="mb-3">
-    <label >Password</label>
-    <input type="password" name="password" class="form-control" >
-  </div>
+<?php $form = Form::begin('', 'post') ?>
+  <?php echo $form->field($model, 'email') ?>
+  <?php echo $form->field($model, 'password')->passwordField() ?>
+
   <button type="submit" class="btn btn-primary">Submit</button>
-</form>
+
+<?php  Form::end() ?>
