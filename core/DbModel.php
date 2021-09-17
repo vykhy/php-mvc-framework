@@ -18,10 +18,6 @@ abstract class DbModel extends Model
             VALUES ( ". implode(',', $params) .") "
         );
 
-        // echo '<pre>';
-        // var_dump($stmt, $params, $attributes);
-        // echo '</pre>';
-
         foreach($attributes as $attribute){
             $stmt->bindValue(":$attribute", $this->{$attribute});
         }
