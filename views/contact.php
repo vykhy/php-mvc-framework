@@ -1,4 +1,9 @@
+<?php
 
+/**@var $this app\core\View */
+$this->title = 'Contact';
+
+?>
 <h1>Contact the billionaire</h1>
 <form action="" method="POST">
   <div class="mb-3">

@@ -3,6 +3,8 @@
 use app\core\form\Form;
 /**@var $model app\models\user */
 
+/**@var $this app\core\View */
+$this->title = 'Login';
 ?>
 
 <h1>Login as a billionaire</h1>

@@ -2,6 +2,8 @@
 
 use app\core\form\Form;
 /**@var $model app\models\user */
+/**@var $this app\core\View */
+$this->title = 'Register';
 
 ?>
 <h1>Register a billionaire</h1>
