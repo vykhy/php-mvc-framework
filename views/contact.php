@@ -1,22 +1,19 @@
 <?php
 
 /**@var $this app\core\View */
+/**@var $model \app\models\ContactForm */
+use app\core\form\Form;
+use app\core\form\TextArea;
+
 $this->title = 'Contact';
 
 ?>
 <h1>Contact the billionaire</h1>
-<form action="" method="POST">
-  <div class="mb-3">
-    <label >Subject </label>
-    <input type="text" name="subject" class="form-control">
-  </div>
-  <div class="mb-3">
-    <label >Email </label>
-    <input type="text" name="email" class="form-control">
-  </div>
-  <div class="mb-3">
-    <label >Body</label>
-    <input type="text" name="body" class="form-control" >
-  
+
+<?php $form = Form::begin('', 'post') ?>
+  <?php echo $form->field($model, 'subject') ?>
+  <?php echo $form->field($model, 'email') ?>
+  <?php echo new TextArea($model, 'body') ?>
   <button type="submit" class="btn btn-primary">Submit</button>
-</form>
+<?php $form = Form::end() ?>
+
