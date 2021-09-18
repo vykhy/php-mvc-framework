@@ -48,6 +48,11 @@ use app\core\Application;
               (Logout)
             </a>
           </li>
+          <li class="nav-item active">
+            <a href="/profile" class="nav-link">
+              Profile
+            </a>
+          </li>
         </ul>
       <?php endif ?>
     </div>
