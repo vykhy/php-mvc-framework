@@ -19,7 +19,7 @@ class Application{
     public Database $db;
     public Session $session;
     public Controller $controller;
-    public ?DbModel $user;
+    public ?UserModel $user;
     public View $view;
     public static Application $app;
 
@@ -65,7 +65,7 @@ class Application{
         $this->controller = $controller;
     }
 
-    public function login(DbModel $user)
+    public function login(UserModel $user)
     {
         $this->user = $user;
         $primaryKey = $user->primaryKey();
@@ -78,6 +78,7 @@ class Application{
     {
         $this->user = null;
         $this->session->remove('user');
+        var_dump($_SESSION);
     }
 
     public static function isGuest()

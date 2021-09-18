@@ -32,6 +32,11 @@ class Session
 
     public function __destruct()
     {
+        $this->removeFlashMessages();
+    }
+
+    private function removeFlashMessages()
+    {
         //Iterate marked and remove 'em
         $flashMessages = $_SESSION[self::FLASH_KEY] ?? [];
         foreach($flashMessages as $key => &$flashMessage){
@@ -54,7 +59,7 @@ class Session
 
     public function remove($key)
     {
-        unset($_SERVER[$key]);
+        unset($_SESSION[$key]);
     }
 }
 ?>
